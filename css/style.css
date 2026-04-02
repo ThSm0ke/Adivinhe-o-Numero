@@ -1,0 +1,238 @@
+/* Fonte gamer */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+}
+
+/* Fundo animado */
+.game-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #0a0f2c, #1b1f5f, #ff00ff, #00ffff);
+    background-size: 800% 800%;
+    animation: gradientMove 15s ease infinite;
+    position: relative;
+}
+
+/* Animação do gradiente */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Painel central */
+.game-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+    animation: neonPulse 2s infinite alternate;
+}
+
+/* Neon pulsando */
+@keyframes neonPulse {
+    from {
+        box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+    }
+
+    to {
+        box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+    }
+}
+
+/* Mascote Lupino */
+.mascote {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    width: 200px;
+    transform: rotate(-5deg);
+}
+
+/* Título */
+.game-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+/* Tentativas (corações/cristais) */
+.tentativas {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Botões neon */
+.btn-custom {
+    background-color: #ff00ff;
+    color: white;
+    border: none;
+    font-size: 0.8rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff00ff;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #00ffff;
+    color: black;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+/* Feedback visual */
+.acerto {
+    animation: acertoFlash 0.5s;
+}
+
+/* Header caixa*/
+.game-header {
+    margin-bottom: 1rem;
+}
+
+.game-title {
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.game-subtitle {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.game-status {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+}
+
+/*CSS do menu */
+.menu-fixo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    padding: 0.5rem 0;
+    z-index: 999;
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+.menu-fixo nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-fixo nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.menu-fixo nav ul li a:hover {
+    color: #000;
+    background: #00ffff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+}
+
+.erro {
+    animation: erroShake 0.5s;
+}
+
+@keyframes acertoFlash {
+    0% {
+        background-color: rgba(0, 255, 0, 0.3);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+@keyframes erroShake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.game-footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 0.8rem;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+/*CSS ADICONAL*/
+.ranking-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #0a0f2c, #1b1f5f, #ff00ff, #00ffff);
+    background-size: 800% 800%;
+    animation: gradientMove 15s ease infinite;
+}
+
+.ranking-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+}
+
+.ranking-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #ff00ff;
+}

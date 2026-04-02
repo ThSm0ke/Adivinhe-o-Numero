@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ranking - Lupino Arcade</title>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- ===== BOOTSTRAP ===== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ===== ICONES DO BOOTSTRAP ===== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- ===== CSS AQUI ===== -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+</head>
+
+<body>
+    <!-- ===== MENU ===== -->
+    <header class="menu-fixo">
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Início</a></li>
+                <li><a href="sobre.html"><i class="bi bi-trophy-fill"></i> Ranking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main class="ranking-wrapper">
+        <div class="ranking-card">
+            <h1 class="ranking-title"><i class="bi bi-trophy-fill"></i> Ranking</h1>
+            <p id="recordeTexto">Carregando recorde...</p>
+            <p id="pontuacaoAtual">Carregando pontuação atual...</p>
+        </div>
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="game-footer">
+        <p>© 2026 Lupin Studio</p>
+    </footer>
+
+    <script>
+        // ANOTAÇÕES -> Puxa recorde e pontuação do localStorage
+        const recorde = localStorage.getItem("recorde") || 0;
+        const pontuacao = localStorage.getItem("pontuacaoAtual") || 0;
+
+        document.getElementById("recordeTexto").textContent = `🏆 Recorde: ${recorde} pontos`;
+        document.getElementById("pontuacaoAtual").textContent = `🎮 Pontuação atual: ${pontuacao} pontos`;
+    </script>
+
+    <!-- ===== JS AQUI ===== -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
